@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+</head>
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Media Query</h1>
+        <i id="burguer" class="material-icons" onclick="clickMenu()">menu</i>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Página 1</a></li>
+                <li><a href="#">Página 2</a></li>
+                <li><a href="#">Página 3</a></li>
+                <li><a href="#">Página 4</a></li>
+            </ul>
+        </menu>
+    </header>
+    <main>
+        <article>
+            <h2>Testando Media Queries</h2>
+            <p>Consultas de mídia são um recurso do CSS 3 que permite que a renderização do conteúdo se adapte a diferentes condições, como resolução da tela (por exemplo, tamanho da tela do celular e do desktop). Tornou-se um padrão recomendado pelo W3C em junho de 2012, e é uma tecnologia fundamental de web design responsivo (RWD).</p>
+
+            <p>As consultas de mídia foram esboçadas pela primeira vez na proposta inicial de CSS de Håkon Wium Lie em 1994, mas não se tornaram parte do CSS 1 . A recomendação HTML4 de 1997 mostra um exemplo de como as consultas de mídia poderiam ser adicionadas no futuro. Em 2000, o W3C começou a trabalhar em consultas de mídia e também em outro esquema para suporte a vários dispositivos: CC/PP . Os dois abordam o mesmo problema, mas o CC/PP é centrado no servidor, enquanto as consultas de mídia são centradas no navegador. O primeiro rascunho de trabalho público para consultas de mídia foi publicado em 2001. Media Queries Nível 3, publicado como uma recomendação candidata em 27 de julho de 2010, tornou-se uma recomendação do W3C em 19 de junho de 2012. As correções propostas foram publicadas em 5 de abril. 2022. Media Queries Level 4, publicado como um rascunho de trabalho em 9 de maio de 2017, era um rascunho de recomendação de candidato do W3C em 25 de dezembro de 2021.</p>
+
+            <p>Uma consulta de mídia consiste em um tipo de mídia e uma ou mais expressões, envolvendo recursos de mídia , que são resolvidas como verdadeiras ou falsas. O resultado da consulta será verdadeiro se o tipo de mídia especificado na consulta de mídia corresponder ao tipo de dispositivo no qual o documento está sendo exibido e todas as expressões na consulta de mídia forem verdadeiras. Quando uma consulta de mídia é verdadeira, a folha de estilos ou regras de estilo correspondentes são aplicadas, seguindo as regras normais em cascata. Consultas de mídia usam o CSS "at-rule". @media.</p>
+            <a href="https://en.wikipedia.org/wiki/Media_queries" target="_blank">Saiba mais.</a>
+        </article>
+    </main>
+    <script>
+
+        function mudouTamanho(){
+            if (window.innerWidth >= 768){
+                itens.style.display = 'block'
+            }else{
+                itens.style.display = 'none'
+            }
+        }
+
+        function clickMenu(){
+
+            if (itens.style.display == 'block'){
+                itens.style.display = 'none'
+            }else{
+                itens.style.display = 'block'
+            } 
+        }
+    </script>
+</body>
+</html>

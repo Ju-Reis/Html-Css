@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body{
+            background-color: rgb(228, 143, 112);
+        }
+        h1{
+            color: white;
+        }
+
+        .container{
+            display: flex;
+            border: 5px solid #fff;
+            height: 300px;
+            align-items: center ;
+        }
+        .container > *{
+            background-color: rgba(255,255,255,0.25);
+            border-radius: 3px;
+            border: 1px solid #fff;
+            color: #fff;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 150ms ease;
+        }
+        .container > *:hover{
+            background-color: rgba(255,255,255,0.4) ;
+        }
+
+        @media (min-width: 56.25em){
+            .container{
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Aling-items</h1>
+   <div class="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+   </div> 
+</body>
+</html>

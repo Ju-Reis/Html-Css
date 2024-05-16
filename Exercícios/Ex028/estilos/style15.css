@@ -1,0 +1,49 @@
+body{
+    background-color: rgb(228, 143, 112);
+}
+h1{
+    color: white;
+}
+
+.container > *{
+    background-color: rgba(255,255,255,0.25);
+    border-radius: 3px;
+    border: 1px solid #fff;
+    color: #fff;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: all 150ms ease;
+}
+.container > *:hover{
+    background-color: rgba(255,255,255,0.4) ;
+}
+
+body .container{
+    display: flex;
+    
+    min-height: 100vh;
+}
+
+.content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.sidebar, .ads{
+    flex-basis: 100px;
+}
+
+.main{
+    flex: 1;
+}
+
+@media(min-width: 56.25em){
+    .content{
+        flex-direction: row;
+    }
+    .sidebar{
+        order: -1;
+    }
+}

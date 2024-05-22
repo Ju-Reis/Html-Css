@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .wrapper{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            grid-template-rows: repeat(3,200px);
+            grid-gap: 1rem;
+        }
+        .wrapper > div:nth-child(1){
+            grid-column: 1/4;/*ou 1/span 3*/
+        }
+        .wrapper div{
+            background-color: royalblue;
+            padding: 1rem;
+        }
+
+        .wrapper div:nth-child(even){
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

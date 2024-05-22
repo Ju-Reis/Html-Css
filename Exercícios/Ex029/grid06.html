@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        @media(min-width: 768px){
+            .wrapper{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, 100px)/*(4, 1fr)*/; 
+                grid-template-rows: 200px;
+                grid-gap: .5rem;
+
+                grid-template-areas: 
+                "header header header header"
+                "main  main    main  aside"
+                "footer footer footer footer"
+                ;
+                }
+        }
+        .wrapper *{
+            background-color: royalblue;
+            padding: 1rem;
+        }
+
+        .wrapper *:nth-child(even){
+            background-color: skyblue;
+        }
+
+        header{
+            grid-area: header;
+        }
+        main{
+            grid-area: main;
+        }
+        aside{
+            grid-area: aside;
+        }
+        footer{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>header</header>
+        <main>main</main>
+        <aside>aside</aside>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

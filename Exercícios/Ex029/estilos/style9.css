@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+    padding: 0pX;
+    color: white;
+}
+
+.l-article{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 0 auto;
+    grid-gap: .5rem;
+    max-width: 1024px;
+    grid-template-areas: 
+    "title      title    title      title   title     title "
+    "meta       meta      meta      meta    meta      meta"
+    "copy1      copy1     copy1     copy1   copy1     copy1"
+    "copy2      copy2     copy2     copy2   copy2     copy2"
+    "media      media     media     media   media     media"
+    "aside      aside     aside     aside   aside     aside"
+    ;
+}
+
+@media screen and (min-width: 480px){
+    .l-article{
+        grid-template-areas: 
+        "meta       meta      title     title   title     title "
+        "copy1      copy1     copy1     copy1   copy1     copy1"
+        "copy2      copy2     copy2     copy2   copy2     copy2"
+        "media      media     media     media   media     aside"
+        ;  
+    }
+}
+
+@media screen and (min-width: 960px){
+    .l-article{
+    grid-template-areas: 
+        "meta       title    title      title   copy2     copy2 "
+        "copy1      copy1     copy1     copy1   copy2     copy2"
+        "copy1      copy1     copy1     copy1   copy2     copy2"
+        "media      media     media     media   media     media"
+        "aside      aside     .         .       .         ."
+        ;
+    }
+}
+
+.l-article > *{
+    min-height: 100px;
+    padding: 1rem;
+}
+
+.l-article_title{
+    background-color: aqua;
+    grid-area: title;    
+}
+
+.l-article_meta{
+    background-color: gainsboro;
+    grid-area: meta;
+}
+.l-article_copy1{
+    background-color: blue;
+    grid-area: copy1;
+}
+
+.l-article_copy2{
+    background-color: darksalmon;
+    grid-area: copy2;
+}
+
+.l-article_media{
+    background-color: rgb(228, 228, 120);
+    grid-area: media;
+    margin: 0;
+}
+
+.l-article_aside{
+    background-color: coral;
+    grid-area: aside;
+}
